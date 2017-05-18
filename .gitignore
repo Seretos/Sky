@@ -1,0 +1,13 @@
+.vs/
+Debug/
+ipch/
+Release/
+
+SkyExample/Debug/
+SkyExample/Release/
+
+SkyNet/Debug/
+SkyNet/Release/
+
+SkyNetTests/Debug/
+SkyNetTests/Release/

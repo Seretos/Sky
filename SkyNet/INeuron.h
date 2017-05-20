@@ -1,5 +1,4 @@
 #pragma once
-#include "ISynapse.h"
 #include <vector>
 
 #ifdef INEURON_EXPORTS
@@ -8,6 +7,29 @@
 #define INEURON_API __declspec(dllimport) 
 #endif
 
+class INeuron;
+
+class ISynapse {
+public:
+	ISynapse(INeuron* source, INeuron* destination, double weight);
+
+	virtual INEURON_API double getWeight();
+	virtual INEURON_API void setWeight(double weight);
+
+	virtual INEURON_API INeuron* getSourceNeuron();
+	virtual INEURON_API INeuron* getTargetNeuron();
+
+	virtual INEURON_API void setValue(double value);
+	virtual INEURON_API double getValue();
+
+	virtual int getType() = 0;
+protected:
+	INeuron* source;
+	INeuron* destination;
+	double weight;
+	double value;
+};
+
 class INeuron {
 public:
 
@@ -15,7 +37,8 @@ public:
 	~INeuron();
 
 	virtual INEURON_API void setValue(double value) = 0;
-	INEURON_API double getValue();
+	virtual INEURON_API double getValue();
+	virtual INEURON_API int getType() = 0;
 
 	INEURON_API void request();
 	INEURON_API void response();
@@ -25,9 +48,16 @@ public:
 
 	void addOutputSynapse(ISynapse* synapse);
 	void addInputSynapse(ISynapse* synapse);
+
+	void setSaveId(int id);
+	int getSaveId();
+
+	int getOutputSynapseSize();
+	ISynapse* getOutputSynapse(int index);
 protected:
 	double threshold;
 	double value;
 	std::vector<ISynapse*> outputs;
 	std::vector<ISynapse*> inputs;
+	int saveId;
 };

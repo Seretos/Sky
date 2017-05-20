@@ -58,5 +58,21 @@ namespace SkyNetTests
 			neuron->setValue(-0.3);
 			Assert::IsTrue(0 == neuron->getValue());
 		}
+
+		TEST_METHOD(biasNeuron) {
+			INeuron* neuron = CSkyNetFactory::createBiasNeuron();
+
+			Assert::IsTrue(1 == neuron->getValue());
+			neuron->request();
+			neuron->response();
+			Assert::IsTrue(1 == neuron->getValue());
+
+			neuron->setThreshold(4);
+
+			Assert::IsTrue(4 == neuron->getValue());
+			neuron->request();
+			neuron->response();
+			Assert::IsTrue(4 == neuron->getValue());
+		}
 	};
 }

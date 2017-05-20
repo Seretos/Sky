@@ -10,4 +10,5 @@
 class CNeuron : public INeuron {
 public:
 	CNEURON_API void setValue(double value);
+	CNEURON_API int getType();
 };

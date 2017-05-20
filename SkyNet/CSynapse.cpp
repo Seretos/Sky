@@ -1,26 +1,10 @@
 #include "stdafx.h"
 #include "CSynapse.h"
 
-CSynapse::CSynapse(INeuron* source, INeuron* destination, double weight) {
-	this->source = source;
-	this->destination = destination;
-	this->weight = weight;
+int CSynapse::getType() {
+	return 1;
 }
 
-double CSynapse::getWeight() {
-	return this->weight;
-}
+CSynapse::CSynapse(INeuron* source, INeuron* destination, double weight) : ISynapse(source, destination, weight) {
 
-void CSynapse::setWeight(double weight) {
-	this->weight = weight;
-}
-
-void CSynapse::setValue(double value) {
-	this->value = value * this->weight;
-}
-
-double CSynapse::getValue() {
-	double val = this->value;
-	this->value = 0.0f;
-	return val;
 }

@@ -1,6 +1,7 @@
 // SkyExample.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
 //
 
+
 #include "stdafx.h"
 #include <iostream>
 #include "../SkyNet/CSkyNetFactory.h"
@@ -14,42 +15,83 @@ int main()
 	srand(time(NULL));
 	int test;
 
-	CSimpleNetworkBuilder* builder = CSkyNetFactory::createSimpleNetworkBuilder();
+	INeuron* inputs1[10];
+	INeuron* inputs2[10];
+	INeuron* outputs[10];
 
-	builder->build(2, 1);
+	CSimulationManager* simulationManager = CSkyNetFactory::createSimulationManager();
+	CNetworkManager* removeManager;
 
-	double inputs[2] = {1.0f,0.2f};
-	builder->input(inputs);
-	builder->run();
+	for (int i = 0; i < 10; i++) {
+		INetwork* network = CSkyNetFactory::createNetwork();
+		CNetworkManager* manager = CSkyNetFactory::createNetworkManager(network);
+		CLayer* inputLayer = CSkyNetFactory::createLayer(network);
+		CLayer* hiddenLayer = CSkyNetFactory::createLayer(network);
+		CLayer* outputLayer = CSkyNetFactory::createLayer(network);
+		INeuron* input1 = CSkyNetFactory::createNeuron();
+		INeuron* input2 = CSkyNetFactory::createNeuron();
+		INeuron* hidden1 = CSkyNetFactory::createNeuron();
+		INeuron* hidden2 = CSkyNetFactory::createNeuron();
+		INeuron* hidden3 = CSkyNetFactory::createNeuron();
+		INeuron* output = CSkyNetFactory::createNeuron();
 
-	double* arr = builder->output();
+		inputLayer->addNeuron(input1);
+		inputLayer->addNeuron(input2);
 
-	cout << arr[0]<< '\n';
+		hiddenLayer->addNeuron(hidden1);
+		hiddenLayer->addNeuron(hidden2);
+		hiddenLayer->addNeuron(hidden3);
 
-	INetwork* net = CSkyNetFactory::createNetwork();
-	INeuron* input1 = CSkyNetFactory::createNeuron();
-	INeuron* input2 = CSkyNetFactory::createNeuron();
-	INeuron* output1 = CSkyNetFactory::createNeuron();
+		outputLayer->addNeuron(output);
 
-	net->addNeuron(input1);
-	net->addNeuron(input2);
-	net->addNeuron(output1);
+		manager->setInputLayer(inputLayer);
+		manager->addHiddenLayer(hiddenLayer);
+		manager->setOutputLayer(outputLayer);
 
-	CSkyNetFactory::createSynapse(input1, output1,0.1);
-	CSkyNetFactory::createSynapse(input2, output1,0.1);
+		manager->autoConnectLayers();
 
-	input1->setValue(1.0f);
-	input2->setValue(1.0f);
+		inputs1[i] = input1;
+		inputs2[i] = input2;
+		outputs[i] = output;
 
-	net->request();
-	net->response();
+		simulationManager->addNetwork(manager);
+		if (i == 9) {
+			removeManager = manager;
+		}
+	}
 
-	cout << input1->getValue();
-	cout << input2->getValue();
-	cout << output1->getValue();
+	for (int i = 0; i < 10; i++) {
+		inputs1[i]->setValue(40);
+		inputs2[i]->setValue(120);
+	}
+	simulationManager->run();
+	simulationManager->run();
+	for (int i = 0; i < 10; i++) {
+		cout << outputs[i]->getValue() << '\n';
+	}
+	cout << '\n';
+
+	simulationManager->removeNetwork(removeManager);
+	outputs[9]->setValue(0);
+	
+	for (int i = 0; i < 10; i++) {
+		inputs1[i]->setValue(40);
+		inputs2[i]->setValue(120);
+	}
+	simulationManager->run();
+	simulationManager->run();
+	for (int i = 0; i < 10; i++) {
+		cout << outputs[i]->getValue() << '\n';
+	}
+
+	CNetworkManagerFile* file = CSkyNetFactory::createNetworkManagerFile();
+
+	file->saveNetwork(removeManager,"test.txt");
+	CNetworkManager* loadNet = file->loadNetwork("test.txt");
+
+	file->saveNetwork(loadNet, "test2.txt");
 
 	cin >> test;
 
     return 0;
 }
-

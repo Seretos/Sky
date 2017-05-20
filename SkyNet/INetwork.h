@@ -15,4 +15,6 @@ public:
 
 	virtual INETWORK_API void request() = 0;
 	virtual INETWORK_API void response() = 0;
+
+	virtual int size() = 0;
 };

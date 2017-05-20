@@ -1,5 +1,5 @@
 #pragma once
-#include "INeuron.h"
+#include "INetwork.h"
 #include <vector>
 
 #ifdef CLAYER_EXPORTS
@@ -10,12 +10,14 @@
 
 class CLayer {
 public:
-	CLayer();
+	CLayer(INetwork* network);
 	~CLayer();
 
-	CLAYER_API void addNeuron(INeuron* neuron);
+	CLAYER_API int addNeuron(INeuron* neuron);
 
-	CLAYER_API std::vector<INeuron*>* getNeurons();
+	CLAYER_API INeuron* getNeuron(int index);
+	CLAYER_API int size();
 private:
 	std::vector<INeuron*> neurons;
+	INetwork* network;
 };

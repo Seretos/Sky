@@ -13,30 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="network">
-      <UniqueIdentifier>{c388a14b-0fc3-4d72-8677-446c9546bbe2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network\header">
-      <UniqueIdentifier>{69825317-77df-4c27-a43f-847c00049a4d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network\source">
-      <UniqueIdentifier>{78ea3e3e-22d0-4de7-b125-55739757f115}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network\interfaces">
-      <UniqueIdentifier>{cd7eb510-ada8-4389-878f-2d47008e5ff7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="builder">
-      <UniqueIdentifier>{065ff068-0a5d-4517-a57d-0b65f086d4a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="builder\header">
-      <UniqueIdentifier>{cff4df1a-e4be-439f-956b-2394aa313f6e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="builder\source">
-      <UniqueIdentifier>{9dd7a96d-726f-425f-96db-ccb6f303c155}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="builder\interfaces">
-      <UniqueIdentifier>{2ddcfb59-1e56-4b33-b960-5dcd21ef8466}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -51,32 +27,47 @@
     <ClInclude Include="CSkyNetFactory.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="INetwork.h">
-      <Filter>network\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="INeuron.h">
-      <Filter>network\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="ISynapse.h">
-      <Filter>network\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="CNetwork.h">
-      <Filter>network\header</Filter>
-    </ClInclude>
-    <ClInclude Include="CNeuron.h">
-      <Filter>network\header</Filter>
-    </ClInclude>
     <ClInclude Include="CSynapse.h">
-      <Filter>network\header</Filter>
-    </ClInclude>
-    <ClInclude Include="CSimpleNetworkBuilder.h">
-      <Filter>builder\header</Filter>
-    </ClInclude>
-    <ClInclude Include="CLayer.h">
-      <Filter>builder\header</Filter>
+      <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="CBinaerNeuron.h">
-      <Filter>network\header</Filter>
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CLayer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CNetwork.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CNetworkManager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CNeuron.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CSimulationManager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="INetwork.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="INeuron.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CBiasNeuron.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CNetworkManagerFile.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogisticNeuron.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CTanhNeuron.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CAssoziationSynapse.h">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -92,26 +83,44 @@
     <ClCompile Include="CSkyNetFactory.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CNetwork.cpp">
-      <Filter>network\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CNeuron.cpp">
-      <Filter>network\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CSynapse.cpp">
-      <Filter>network\source</Filter>
-    </ClCompile>
-    <ClCompile Include="CSimpleNetworkBuilder.cpp">
-      <Filter>builder\source</Filter>
+    <ClCompile Include="CBinaerNeuron.cpp">
+      <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="CLayer.cpp">
-      <Filter>builder\source</Filter>
+      <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CBinaerNeuron.cpp">
-      <Filter>network\source</Filter>
+    <ClCompile Include="CNetwork.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CNetworkManager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CNeuron.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CSimulationManager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CSynapse.cpp">
+      <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="INeuron.cpp">
-      <Filter>network\source</Filter>
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CBiasNeuron.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CNetworkManagerFile.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogisticNeuron.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CTanhNeuron.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CAssoziationSynapse.cpp">
+      <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

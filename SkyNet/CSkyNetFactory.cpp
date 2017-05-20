@@ -3,6 +3,9 @@
 #include "CNetwork.h"
 #include "CNeuron.h"
 #include "CBinaerNeuron.h"
+#include "CBiasNeuron.h"
+#include "CLogisticNeuron.h"
+#include "CTanhNeuron.h"
 #include "CSynapse.h"
 #include "INeuron.h"
 
@@ -31,6 +34,21 @@ INeuron* CSkyNetFactory::createBinaerNeuron() {
 	return (INeuron*)neuron;
 }
 
+INeuron* CSkyNetFactory::createBiasNeuron() {
+	CBiasNeuron* neuron = new CBiasNeuron();
+	neuron->setThreshold(1);
+	return (INeuron*)neuron;
+}
+
+INeuron* CSkyNetFactory::createLogisticNeuron() {
+	CLogisticNeuron* neuron = new CLogisticNeuron();
+	return (INeuron*)neuron;
+}
+INeuron* CSkyNetFactory::createTanhNeuron() {
+	CTanhNeuron* neuron = new CTanhNeuron();
+	return (INeuron*)neuron;
+}
+
 ISynapse* CSkyNetFactory::createSynapse(INeuron* source, INeuron* destination, double weight) {
 	ISynapse* synapse = new CSynapse(source,destination,weight);
 
@@ -40,12 +58,21 @@ ISynapse* CSkyNetFactory::createSynapse(INeuron* source, INeuron* destination, d
 	return synapse;
 }
 
-CSimpleNetworkBuilder* CSkyNetFactory::createSimpleNetworkBuilder() {
-	CSimpleNetworkBuilder* builder = new CSimpleNetworkBuilder();
-	return builder;
+CNetworkManager* CSkyNetFactory::createNetworkManager(INetwork* network) {
+	CNetworkManager* manager = new CNetworkManager(network);
+	return manager;
 }
 
-CLayer* CSkyNetFactory::createLayer() {
-	CLayer* layer = new CLayer();
+CLayer* CSkyNetFactory::createLayer(INetwork* network) {
+	CLayer* layer = new CLayer(network);
 	return layer;
+}
+
+CSimulationManager* CSkyNetFactory::createSimulationManager() {
+	CSimulationManager* manager = new CSimulationManager();
+	return manager;
+}
+
+CNetworkManagerFile* CSkyNetFactory::createNetworkManagerFile() {
+	return new CNetworkManagerFile();
 }

@@ -11,3 +11,7 @@ void CNeuron::setValue(double value) {
 		this->value = 0;
 	}
 }
+
+int CNeuron::getType() {
+	return 1;
+}

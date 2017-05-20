@@ -11,6 +11,8 @@ public:
 	int addNeuron(INeuron* neuron);
 	INeuron* getNeuron(int index);
 
+	int size();
+
 	void request();
 	void response();
 private:

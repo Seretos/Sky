@@ -154,6 +154,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="NetworkManagerTests.cpp" />
+    <ClCompile Include="NeuronTests.cpp" />
+    <ClCompile Include="SimulationManagerTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -161,6 +164,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="NetworkTests.cpp" />
+    <ClCompile Include="SynapseTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SkyNet\SkyNet.vcxproj">

@@ -11,6 +11,18 @@ namespace SkyNetTests
 	public:
 		TEST_METHOD(synapseTest)
 		{
+			INeuron* input = CSkyNetFactory::createNeuron();
+			INeuron* output = CSkyNetFactory::createNeuron();
+			ISynapse* synapse = CSkyNetFactory::createSynapse(input, output, 0.5);
+
+			Assert::IsTrue(0==synapse->getValue());
+
+			input->setValue(4);
+			Assert::IsTrue(0 == synapse->getValue());
+			input->request();
+			output->response();
+			Assert::IsTrue(0 == synapse->getValue());
+			Assert::IsTrue(2 == output->getValue());
 		}
 	};
 }

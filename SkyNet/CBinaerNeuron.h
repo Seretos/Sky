@@ -10,4 +10,5 @@
 class CBinaerNeuron : public INeuron {
 public:
 	CBINAERNEURON_API void setValue(double value);
+	CBINAERNEURON_API int getType();
 };

@@ -9,3 +9,7 @@ void CBinaerNeuron::setValue(double value) {
 		this->value = 0;
 	}
 }
+
+int CBinaerNeuron::getType() {
+	return 2;
+}

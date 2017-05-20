@@ -202,11 +202,6 @@ namespace SkyNetTests
 			Assert::IsTrue(0 == output->getValue());
 
 			network->request();
-			
-			Assert::IsTrue(0 == input1->getValue());
-			Assert::IsTrue(0 == input2->getValue());
-			Assert::IsTrue(0 == output->getValue());
-			
 			network->response();
 
 			Assert::IsTrue(0 == input1->getValue());
@@ -224,11 +219,6 @@ namespace SkyNetTests
 			Assert::IsTrue(0.6 == output->getValue());
 			
 			network->request();
-
-			Assert::IsTrue(0 == input1->getValue());
-			Assert::IsTrue(0 == input2->getValue());
-			Assert::IsTrue(0 == output->getValue());
-
 			network->response();
 
 			Assert::IsTrue(0 == input1->getValue());

@@ -1,8 +1,10 @@
 #pragma once
 
+#include "INeuron.h"
 #include "INetwork.h"
-#include "ISynapse.h"
-#include "CSimpleNetworkBuilder.h"
+#include "CNetworkManager.h"
+#include "CSimulationManager.h"
+#include "CNetworkManagerFile.h"
 
 #ifdef SKYNETFACTORY_EXPORTS
 #define SKYNETFACTORY_API __declspec(dllexport) 
@@ -19,9 +21,15 @@ public:
 	static SKYNETFACTORY_API INetwork* createNetwork();
 	static SKYNETFACTORY_API INeuron* createNeuron();
 	static SKYNETFACTORY_API INeuron* createBinaerNeuron();
+	static SKYNETFACTORY_API INeuron* createBiasNeuron();
+	static SKYNETFACTORY_API INeuron* createLogisticNeuron();
+	static SKYNETFACTORY_API INeuron* createTanhNeuron();
 
 	static SKYNETFACTORY_API ISynapse* createSynapse(INeuron* source, INeuron* destination, double weight = 0.5);
-	static SKYNETFACTORY_API CSimpleNetworkBuilder* createSimpleNetworkBuilder();
-	static SKYNETFACTORY_API CLayer* createLayer();
+	static SKYNETFACTORY_API CLayer* createLayer(INetwork* network);
+
+	static SKYNETFACTORY_API CNetworkManager* createNetworkManager(INetwork* network);
+	static SKYNETFACTORY_API CSimulationManager* createSimulationManager();
+	static SKYNETFACTORY_API CNetworkManagerFile* createNetworkManagerFile();
 };
 

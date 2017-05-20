@@ -9,6 +9,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyExample", "SkyExample\Sk
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyNetTests", "SkyNetTests\SkyNetTests.vcxproj", "{362ECB04-B216-41E1-A4A5-0BBB010E59E0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09EF23FA-027D-43A2-AEFA-81CED907B393}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyView", "SkyView\SkyView.vcxproj", "{68444C18-8DF0-488B-844D-46CB7FDD402C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +48,14 @@ Global
 		{362ECB04-B216-41E1-A4A5-0BBB010E59E0}.Release|x64.Build.0 = Release|x64
 		{362ECB04-B216-41E1-A4A5-0BBB010E59E0}.Release|x86.ActiveCfg = Release|Win32
 		{362ECB04-B216-41E1-A4A5-0BBB010E59E0}.Release|x86.Build.0 = Release|Win32
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Debug|x64.ActiveCfg = Debug|x64
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Debug|x64.Build.0 = Debug|x64
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Debug|x86.ActiveCfg = Debug|Win32
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Debug|x86.Build.0 = Debug|Win32
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Release|x64.ActiveCfg = Release|x64
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Release|x64.Build.0 = Release|x64
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Release|x86.ActiveCfg = Release|Win32
+		{68444C18-8DF0-488B-844D-46CB7FDD402C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

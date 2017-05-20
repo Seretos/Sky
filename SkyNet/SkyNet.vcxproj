@@ -145,26 +145,37 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CAssoziationSynapse.h" />
+    <ClInclude Include="CBiasNeuron.h" />
     <ClInclude Include="CBinaerNeuron.h" />
     <ClInclude Include="CLayer.h" />
+    <ClInclude Include="CLogisticNeuron.h" />
     <ClInclude Include="CNetwork.h" />
-    <ClInclude Include="CSimpleNetworkBuilder.h" />
+    <ClInclude Include="CNetworkManagerFile.h" />
+    <ClInclude Include="CNetworkManager.h" />
     <ClInclude Include="CNeuron.h" />
+    <ClInclude Include="CSimulationManager.h" />
     <ClInclude Include="CSkyNetFactory.h" />
     <ClInclude Include="CSynapse.h" />
+    <ClInclude Include="CTanhNeuron.h" />
     <ClInclude Include="INetwork.h" />
     <ClInclude Include="INeuron.h" />
-    <ClInclude Include="ISynapse.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAssoziationSynapse.cpp" />
+    <ClCompile Include="CBiasNeuron.cpp" />
     <ClCompile Include="CBinaerNeuron.cpp" />
     <ClCompile Include="CLayer.cpp" />
+    <ClCompile Include="CLogisticNeuron.cpp" />
     <ClCompile Include="CNetwork.cpp" />
-    <ClCompile Include="CSimpleNetworkBuilder.cpp" />
+    <ClCompile Include="CNetworkManager.cpp" />
+    <ClCompile Include="CNetworkManagerFile.cpp" />
     <ClCompile Include="CNeuron.cpp" />
+    <ClCompile Include="CSimulationManager.cpp" />
     <ClCompile Include="CSynapse.cpp" />
+    <ClCompile Include="CTanhNeuron.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

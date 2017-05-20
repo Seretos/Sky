@@ -29,3 +29,7 @@ void CNetwork::response() {
 		this->neurons.at(i)->response();
 	}
 }
+
+int CNetwork::size() {
+	return this->neurons.size();
+}

@@ -43,7 +43,12 @@ ISynapse* CNetworkManagerFile::createTypeSynapse(CNetworkManager* manager, std::
 	INeuron* sourceNeuron = manager->findNeuronBySaveId(::atoi(source.c_str()));
 	INeuron* targetNeuron = manager->findNeuronBySaveId(::atoi(target.c_str()));
 
-	ISynapse* synapse = CSkyNetFactory::createSynapse(sourceNeuron,targetNeuron,::atof(weight.c_str()));
+	ISynapse* synapse;
+	if (type.compare("2") == 0) {
+		synapse = CSkyNetFactory::createAssoziationSynapse(sourceNeuron, targetNeuron, ::atof(weight.c_str()));
+	}else{
+		synapse = CSkyNetFactory::createSynapse(sourceNeuron, targetNeuron, ::atof(weight.c_str()));
+	}
 	return synapse;
 }
 
@@ -64,7 +69,7 @@ INeuron* CNetworkManagerFile::createTypeNeuron(std::string saveId, std::string t
 	else {
 		neuron = CSkyNetFactory::createNeuron();
 	}
-	neuron->setThreshold(::atof(threshold.c_str()));
+	neuron->setThreshold(this->stringToDouble(threshold));
 	neuron->setSaveId(::atoi(saveId.c_str()));
 	return neuron;
 }
@@ -127,7 +132,7 @@ int CNetworkManagerFile::saveNeurons(std::ofstream* fileStream,CLayer* layer, in
 	for (int i = 0; i < layer->size(); i++) {
 		INeuron* neuron = layer->getNeuron(i);
 		neuron->setSaveId(index + i);
-		*fileStream << "neuron:" << neuron->getSaveId() << ':' << neuron->getType() << ':' << neuron->getThreshold() << '\n';
+		*fileStream << "neuron:" << neuron->getSaveId() << ':' << neuron->getType() << ':' << this->doubleToString(neuron->getThreshold()) << '\n';
 	}
 	return index + layer->size();
 }
@@ -137,7 +142,25 @@ void CNetworkManagerFile::saveSynapses(std::ofstream* fileStream, CLayer* layer)
 		INeuron* neuron = layer->getNeuron(i);
 		for (int x = 0; x < neuron->getOutputSynapseSize(); x++) {
 			ISynapse* synapse = neuron->getOutputSynapse(x);
-			*fileStream << "synapse:" << synapse->getType() << ":" << synapse->getSourceNeuron()->getSaveId() << ":" << synapse->getTargetNeuron()->getSaveId() << ":" << synapse->getWeight() << "\n";
+			*fileStream << "synapse:" << synapse->getType() << ":" << synapse->getSourceNeuron()->getSaveId() << ":" << synapse->getTargetNeuron()->getSaveId() << ":" << this->doubleToString(synapse->getWeight()) << "\n";
 		}
 	}
+}
+
+std::string CNetworkManagerFile::doubleToString(double val) {
+	if (val == NULL) {
+		return std::string("null");
+	}
+	char buffer[100];
+	std::sprintf(buffer, "%e", val);
+	return buffer;
+}
+
+double CNetworkManagerFile::stringToDouble(std::string val) {
+	if (val.compare("null") == 0) {
+		return NULL;
+	}
+	char* end;
+	double result = std::strtod(val.c_str(),&end);
+	return result;
 }

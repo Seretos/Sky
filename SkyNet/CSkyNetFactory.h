@@ -30,6 +30,7 @@ public:
 	static SKYNETFACTORY_API INeuron* createTanhNeuron();
 
 	static SKYNETFACTORY_API ISynapse* createSynapse(INeuron* source, INeuron* destination, double weight = 0.5);
+	static SKYNETFACTORY_API ISynapse* createAssoziationSynapse(INeuron* source, INeuron* destination, double weight = 0.5);
 	static SKYNETFACTORY_API CLayer* createLayer(INetwork* network);
 
 	static SKYNETFACTORY_API CNetworkManager* createNetworkManager(INetwork* network);

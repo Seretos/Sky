@@ -27,4 +27,7 @@ private:
 	int lineMode(std::string column, int currentMode, CNetworkManager* manager);
 	INeuron* createTypeNeuron(std::string saveId,std::string type, std::string threshold);
 	ISynapse* createTypeSynapse(CNetworkManager* manager, std::string type, std::string source, std::string target, std::string weight);
+
+	std::string doubleToString(double val);
+	double stringToDouble(std::string val);
 };

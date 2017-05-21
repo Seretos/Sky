@@ -7,10 +7,13 @@
 
 #include "targetver.h"
 
+#if defined(_WIN32)
 #define WIN32_LEAN_AND_MEAN             // Selten verwendete Komponenten aus Windows-Headern ausschlieﬂen
 // Windows-Headerdateien:
 #include <windows.h>
-
+#else
+#include <cstddef>
+#endif
 
 
 // TODO: Hier auf zus‰tzliche Header, die das Programm erfordert, verweisen.

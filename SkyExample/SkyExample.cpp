@@ -7,7 +7,7 @@
 #include "../SkyNet/CSkyNetFactory.h"
 #include "../SkyNet/INetwork.h"
 #include <time.h>
-
+#include <cstdlib>
 using namespace std;
 
 int main()
@@ -73,7 +73,7 @@ int main()
 
 	simulationManager->removeNetwork(removeManager);
 	outputs[9]->setValue(0);
-	
+
 	for (int i = 0; i < 10; i++) {
 		inputs1[i]->setValue(40);
 		inputs2[i]->setValue(120);

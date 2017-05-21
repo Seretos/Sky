@@ -3,12 +3,13 @@
 #include "CSkyNetFactory.h"
 #include "CBiasNeuron.h"
 #include <sstream>
+#include <stdlib.h>
 
 CNetworkManager* CNetworkManagerFile::loadNetwork(std::string fileName) {
 	INetwork* network = CSkyNetFactory::createNetwork();
 	CNetworkManager* manager = CSkyNetFactory::createNetworkManager(network);
 
-	std::ifstream infile(fileName);
+	std::ifstream infile(fileName.c_str());
 
 	std::string line;
 	int mode = 0;
@@ -103,7 +104,7 @@ std::vector<std::string> CNetworkManagerFile::parseLine(std::string line) {
 void CNetworkManagerFile::saveNetwork(CNetworkManager* network, std::string fileName) {
 	std::string content;
 	std::ofstream file;
-	file.open(fileName);
+	file.open(fileName.c_str());
 	file << "inputs:\n";
 	int index = this->saveNeurons(&file,network->getInputLayer());
 	for (int i = 0; i < network->getHiddenLayerSize(); i++) {

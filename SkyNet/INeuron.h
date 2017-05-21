@@ -1,10 +1,14 @@
 #pragma once
 #include <vector>
 
+#if defined(_WIN32)
 #ifdef INEURON_EXPORTS
-#define INEURON_API __declspec(dllexport) 
+#define INEURON_API __declspec(dllexport)
 #else
-#define INEURON_API __declspec(dllimport) 
+#define INEURON_API __declspec(dllimport)
+#endif
+#else
+#define INEURON_API
 #endif
 
 class INeuron;

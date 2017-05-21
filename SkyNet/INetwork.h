@@ -1,10 +1,14 @@
 #pragma once
 #include "INeuron.h"
 
+#if defined(_WIN32)
 #ifdef INETWORK_EXPORTS
-#define INETWORK_API __declspec(dllexport) 
+#define INETWORK_API __declspec(dllexport)
 #else
-#define INETWORK_API __declspec(dllimport) 
+#define INETWORK_API __declspec(dllimport)
+#endif
+#else
+#define INETWORK_API
 #endif
 
 class INetwork

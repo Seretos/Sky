@@ -1,10 +1,14 @@
 #pragma once
 #include "INeuron.h"
 
+#if defined(_WIN32)
 #ifdef CASSOZIATIONSYNAPSE_EXPORTS
-#define CASSOZIATIONSYNAPSE_API __declspec(dllexport) 
+#define CASSOZIATIONSYNAPSE_API __declspec(dllexport)
 #else
-#define CASSOZIATIONSYNAPSE_API __declspec(dllimport) 
+#define CASSOZIATIONSYNAPSE_API __declspec(dllimport)
+#endif
+#else
+#define CASSOZIATIONSYNAPSE_API
 #endif
 
 class CAssoziationSynapse : public ISynapse {

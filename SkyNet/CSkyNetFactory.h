@@ -6,10 +6,14 @@
 #include "CSimulationManager.h"
 #include "CNetworkManagerFile.h"
 
+#if defined(_WIN32)
 #ifdef SKYNETFACTORY_EXPORTS
-#define SKYNETFACTORY_API __declspec(dllexport) 
+#define SKYNETFACTORY_API __declspec(dllexport)
 #else
-#define SKYNETFACTORY_API __declspec(dllimport) 
+#define SKYNETFACTORY_API __declspec(dllimport)
+#endif
+#else
+#define SKYNETFACTORY_API
 #endif
 
 class CSkyNetFactory

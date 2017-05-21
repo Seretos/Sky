@@ -2,10 +2,14 @@
 #include "INetwork.h"
 #include <vector>
 
+#if defined(_WIN32)
 #ifdef CLAYER_EXPORTS
-#define CLAYER_API __declspec(dllexport) 
+#define CLAYER_API __declspec(dllexport)
 #else
-#define CLAYER_API __declspec(dllimport) 
+#define CLAYER_API __declspec(dllimport)
+#endif
+#else
+#define CLAYER_API
 #endif
 
 class CLayer {

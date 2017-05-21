@@ -4,10 +4,14 @@
 #include <iostream>
 #include <fstream>
 
+#if defined(_WIN32)
 #ifdef CNETWORKMANAGERFILE_EXPORTS
-#define CNETWORKMANAGERFILE_API __declspec(dllexport) 
+#define CNETWORKMANAGERFILE_API __declspec(dllexport)
 #else
-#define CNETWORKMANAGERFILE_API __declspec(dllimport) 
+#define CNETWORKMANAGERFILE_API __declspec(dllimport)
+#endif
+#else
+#define CNETWORKMANAGERFILE_API
 #endif
 
 class CNetworkManagerFile {

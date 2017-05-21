@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CTanhNeuron.h"
+#include <cmath>
 
 void CTanhNeuron::setValue(double value) {
 	if (value >= this->threshold) {

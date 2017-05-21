@@ -3,10 +3,14 @@
 #include "CLayer.h"
 #include <vector>
 
+#if defined(_WIN32)
 #ifdef CNETWORKMANAGER_EXPORTS
-#define CNETWORKMANAGER_API __declspec(dllexport) 
+#define CNETWORKMANAGER_API __declspec(dllexport)
 #else
-#define CNETWORKMANAGER_API __declspec(dllimport) 
+#define CNETWORKMANAGER_API __declspec(dllimport)
+#endif
+#else
+#define CNETWORKMANAGER_API
 #endif
 
 class CNetworkManager {

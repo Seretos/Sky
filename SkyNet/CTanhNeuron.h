@@ -1,10 +1,14 @@
 #pragma once
 #include "INeuron.h"
 
+#if defined(_WIN32)
 #ifdef CTANHNEURON_EXPORTS
-#define CTANHNEURON_API __declspec(dllexport) 
+#define CTANHNEURON_API __declspec(dllexport)
 #else
-#define CTANHNEURON_API __declspec(dllimport) 
+#define CTANHNEURON_API __declspec(dllimport)
+#endif
+#else
+#define CTANHNEURON_API
 #endif
 
 class CTanhNeuron : public INeuron {

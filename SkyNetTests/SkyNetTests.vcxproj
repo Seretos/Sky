@@ -154,6 +154,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="NetworkManagerFileTests.cpp" />
     <ClCompile Include="NetworkManagerTests.cpp" />
     <ClCompile Include="NeuronTests.cpp" />
     <ClCompile Include="SimulationManagerTest.cpp" />

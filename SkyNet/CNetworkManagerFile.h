@@ -4,10 +4,14 @@
 #include <iostream>
 #include <fstream>
 
+#if defined(_WIN32)
 #ifdef CNETWORKMANAGERFILE_EXPORTS
-#define CNETWORKMANAGERFILE_API __declspec(dllexport) 
+#define CNETWORKMANAGERFILE_API __declspec(dllexport)
 #else
-#define CNETWORKMANAGERFILE_API __declspec(dllimport) 
+#define CNETWORKMANAGERFILE_API __declspec(dllimport)
+#endif
+#else
+#define CNETWORKMANAGERFILE_API
 #endif
 
 class CNetworkManagerFile {
@@ -23,4 +27,7 @@ private:
 	int lineMode(std::string column, int currentMode, CNetworkManager* manager);
 	INeuron* createTypeNeuron(std::string saveId,std::string type, std::string threshold);
 	ISynapse* createTypeSynapse(CNetworkManager* manager, std::string type, std::string source, std::string target, std::string weight);
+
+	std::string doubleToString(double val);
+	double stringToDouble(std::string val);
 };

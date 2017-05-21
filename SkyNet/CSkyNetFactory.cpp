@@ -7,6 +7,7 @@
 #include "CLogisticNeuron.h"
 #include "CTanhNeuron.h"
 #include "CSynapse.h"
+#include "CAssoziationSynapse.h"
 #include "INeuron.h"
 
 CSkyNetFactory::CSkyNetFactory()
@@ -51,6 +52,15 @@ INeuron* CSkyNetFactory::createTanhNeuron() {
 
 ISynapse* CSkyNetFactory::createSynapse(INeuron* source, INeuron* destination, double weight) {
 	ISynapse* synapse = new CSynapse(source,destination,weight);
+
+	source->addOutputSynapse(synapse);
+	destination->addInputSynapse(synapse);
+
+	return synapse;
+}
+
+ISynapse* CSkyNetFactory::createAssoziationSynapse(INeuron* source, INeuron* destination, double weight) {
+	ISynapse* synapse = new CAssoziationSynapse(source,destination,weight);
 
 	source->addOutputSynapse(synapse);
 	destination->addInputSynapse(synapse);

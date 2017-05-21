@@ -2,6 +2,7 @@
 Debug/
 ipch/
 Release/
+bin/
 
 SkyExample/Debug/
 SkyExample/Release/

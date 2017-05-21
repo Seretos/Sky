@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CNetworkManager.h"
 #include "CSkyNetFactory.h"
+#include <cstdlib>
 
 CNetworkManager::CNetworkManager(INetwork* network) {
 	this->network = network;

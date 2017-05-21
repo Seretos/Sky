@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CLogisticNeuron.h"
+#include <cmath>
 
 void CLogisticNeuron::setValue(double value) {
 	if (value >= this->threshold) {

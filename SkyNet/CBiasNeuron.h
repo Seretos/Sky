@@ -1,10 +1,14 @@
 #pragma once
 #include "INeuron.h"
 
+#if defined(_WIN32)
 #ifdef CBIASNEURON_EXPORTS
-#define CBIASNEURON_API __declspec(dllexport) 
+#define CBIASNEURON_API __declspec(dllexport)
 #else
-#define CBIASNEURON_API __declspec(dllimport) 
+#define CBIASNEURON_API __declspec(dllimport)
+#endif
+#else
+#define CBIASNEURON_API
 #endif
 
 class CBiasNeuron : public INeuron {

@@ -26,3 +26,16 @@ void CRenderFrame::render(){
         frames.at(i)->render();
     }
 }
+
+int CRenderFrame::getX() {
+	return this->x;
+}
+int CRenderFrame::getY() {
+	return this->y;
+}
+int CRenderFrame::getWidth() {
+	return this->width;
+}
+int CRenderFrame::getHeight() {
+	return this->height;
+}

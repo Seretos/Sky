@@ -17,4 +17,7 @@ class CSkyViewFactory
 public:
 	static SKYVIEWFACTORY_API CRenderWindow* createRenderWindow(int width, int height);
 	static SKYVIEWFACTORY_API CRenderFrame* createNetworkFrame(CNetworkManager* manager, int x, int y, int width, int height);
+
+	static CRenderFrame* createNeuronFrame(INeuron* neuron, int x, int y);
+	static CRenderFrame* createSynapseFrame(ISynapse* synapse, int startX, int startY, int endX, int endY);
 };

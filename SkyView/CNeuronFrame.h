@@ -18,6 +18,12 @@ class CNeuronFrame : public CRenderFrame
         ~CNeuronFrame();
 
         virtual CNEURONFRAME_API void render();
+
+		virtual int getX();
+		virtual int getY();
+
+		INeuron* getNeuron();
     protected:
+		INeuron* neuron;
     private:
 };

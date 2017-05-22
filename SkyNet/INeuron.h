@@ -56,8 +56,8 @@ public:
 	void setSaveId(int id);
 	int getSaveId();
 
-	int getOutputSynapseSize();
-	ISynapse* getOutputSynapse(int index);
+	INEURON_API int getOutputSynapseSize();
+	INEURON_API ISynapse* getOutputSynapse(int index);
 protected:
 	double threshold;
 	double value;

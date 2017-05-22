@@ -30,10 +30,16 @@
     <ClInclude Include="CRenderWindow.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CNetworkWindow.h">
+    <ClInclude Include="CNetworkFrame.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CRenderNeuron.h">
+    <ClInclude Include="CRenderFrame.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CNeuronFrame.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CSynapseFrame.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,10 +59,16 @@
     <ClCompile Include="CRenderWindow.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CNetworkWindow.cpp">
+    <ClCompile Include="CNetworkFrame.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CRenderNeuron.cpp">
+    <ClCompile Include="CRenderFrame.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CNeuronFrame.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CSynapseFrame.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

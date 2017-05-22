@@ -10,6 +10,8 @@
 #endif
 #include "../SkyNet/CNetworkManager.h"
 #include "CRenderFrame.h"
+#include "CNeuronFrame.h"
+#include "CSynapseFrame.h"
 
 class CNetworkFrame : public CRenderFrame
 {
@@ -20,5 +22,12 @@ class CNetworkFrame : public CRenderFrame
         virtual CNETWORKFRAME_API void render();
     protected:
         CNetworkManager* manager;
+		std::vector<CNeuronFrame*> neurons;
+		std::vector<CSynapseFrame*> synapses;
+
+		void createRenderLayer(CLayer* layer, int startX);
+		void createRenderSynapseLayer(CLayer* layer);
+
+		CNeuronFrame* findNeuronFrame(INeuron* neuron);
     private:
 };

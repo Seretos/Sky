@@ -22,6 +22,11 @@ class CRenderFrame
 
         CRENDERFRAME_API void add(CRenderFrame* frame);
         CRENDERFRAME_API void erase(CRenderFrame* frame);
+
+		virtual int getX();
+		virtual int getY();
+		virtual int getWidth();
+		virtual int getHeight();
     protected:
         std::vector<CRenderFrame*> frames;
         int x;

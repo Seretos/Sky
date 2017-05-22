@@ -148,18 +148,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CNetworkWindow.h" />
-    <ClInclude Include="CRenderNeuron.h" />
+    <ClInclude Include="CNetworkFrame.h" />
+    <ClInclude Include="CNeuronFrame.h" />
+    <ClInclude Include="CRenderFrame.h" />
     <ClInclude Include="CRenderWindow.h" />
     <ClInclude Include="CSkyViewFactory.h" />
+    <ClInclude Include="CSynapseFrame.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CNetworkWindow.cpp" />
-    <ClCompile Include="CRenderNeuron.cpp" />
+    <ClCompile Include="CNetworkFrame.cpp" />
+    <ClCompile Include="CNeuronFrame.cpp" />
+    <ClCompile Include="CRenderFrame.cpp" />
     <ClCompile Include="CRenderWindow.cpp" />
     <ClCompile Include="CSkyViewFactory.cpp" />
+    <ClCompile Include="CSynapseFrame.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

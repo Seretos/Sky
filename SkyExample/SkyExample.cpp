@@ -88,18 +88,57 @@ CNetworkManager* createManager1() {
 	return manager;
 }
 
+CNetworkManager* createManager3() {
+	INetwork* network = CSkyNetFactory::createNetwork();
+	CNetworkManager* manager = CSkyNetFactory::createNetworkManager(network);
+	CLayer* inputLayer = CSkyNetFactory::createLayer(network);
+	
+	CLayer* outputLayer = CSkyNetFactory::createLayer(network);
+
+	for (int i = 0; i < 10; i++) {
+		INeuron* input = CSkyNetFactory::createNeuron();
+		inputLayer->addNeuron(input);
+	}
+
+	for (int i = 0; i < 20; i++) {
+		CLayer* hiddenLayer = CSkyNetFactory::createLayer(network);
+		for (int y = 0; y < 15; y++) {
+			INeuron* hidden = CSkyNetFactory::createTanhNeuron();
+			hiddenLayer->addNeuron(hidden);
+		}
+		manager->addHiddenLayer(hiddenLayer);
+	}
+
+	for (int i = 0; i < 5; i++) {
+		INeuron* output = CSkyNetFactory::createNeuron();
+		outputLayer->addNeuron(output);
+	}
+
+	manager->setInputLayer(inputLayer);
+	manager->setOutputLayer(outputLayer);
+
+	manager->autoConnectLayers();
+
+	return manager;
+}
+
 int main()
 {
 		srand(time(NULL));
 		CNetworkManager* manager1 = createManager1();
 		CNetworkManager* manager2 = createManager2();
+		CNetworkManager* manager3 = createManager3();
 
 		CRenderWindow* window = CSkyViewFactory::createRenderWindow(1024,768);
 		CRenderFrame* frame1 = CSkyViewFactory::createNetworkFrame(manager1,10,10,200,200);
+		CRenderFrame* frame2 = CSkyViewFactory::createNetworkFrame(manager2, 210, 10, 200, 200);
+		CRenderFrame* frame3 = CSkyViewFactory::createNetworkFrame(manager3, 10, 210, 800, 400);
 
 		window->init();
 
         window->add(frame1);
+		window->add(frame2);
+		window->add(frame3);
 
 		//CRenderWindow* window2 = CSkyViewFactory::createNetworkWindow(manager2);
 		//window2->init();
@@ -110,6 +149,7 @@ int main()
 			window->render();
 			manager1->run();
 			manager2->run();
+			manager3->run();
 //			Sleep(1000);
 			pos++;
 			if (pos == 4) {
@@ -118,6 +158,12 @@ int main()
 
 				manager2->getInputLayer()->getNeuron(0)->setValue(1.0);
 				manager2->getInputLayer()->getNeuron(1)->setValue(-1.0);
+
+				double v = -2.5;
+				for (int i = 0; i < 10; i++) {
+					manager3->getInputLayer()->getNeuron(i)->setValue(v);
+					v += 0.5;
+				}
 				pos = 0;
 			}
 		}

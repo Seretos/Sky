@@ -10,7 +10,6 @@
 #include <time.h>
 #include <cstdlib>
 #include <thread>
-#include <Windows.h>
 
 using namespace std;
 
@@ -107,19 +106,19 @@ int main()
 			window->render();
 			manager1->run();
 			manager2->run();
-			Sleep(1000);
+//			Sleep(1000);
 			pos++;
 			if (pos == 4) {
 				manager1->getInputLayer()->getNeuron(0)->setValue(1.0);
 				manager1->getInputLayer()->getNeuron(1)->setValue(-1.0);
-				
+
 				manager2->getInputLayer()->getNeuron(0)->setValue(1.0);
 				manager2->getInputLayer()->getNeuron(1)->setValue(-1.0);
 				pos = 0;
 			}
 		}
 	/*int test;
-	
+
 	INeuron* inputs1[10];
 	INeuron* inputs2[10];
 	INeuron* outputs[10];
@@ -165,7 +164,7 @@ int main()
 			removeManager = manager;
 			//th = std::thread(networkViewThread, window);
 		}
-		
+
 	}
 	window = CSkyViewFactory::createNetworkWindow(removeManager);
 	window->init();

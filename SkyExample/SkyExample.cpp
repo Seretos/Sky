@@ -94,15 +94,15 @@ int main()
 		CNetworkManager* manager1 = createManager1();
 		CNetworkManager* manager2 = createManager2();
 
-		CRenderWindow* window = CSkyViewFactory::createNetworkWindow(manager1);
+		CRenderWindow* window = CSkyViewFactory::createRenderWindow();
 		window->init();
 
-		CRenderWindow* window2 = CSkyViewFactory::createNetworkWindow(manager2);
-		window2->init();
+		//CRenderWindow* window2 = CSkyViewFactory::createNetworkWindow(manager2);
+		//window2->init();
 
 		int pos = 0;
 		while (1) {
-			window2->render();
+			//window2->render();
 			window->render();
 			manager1->run();
 			manager2->run();

@@ -8,6 +8,7 @@
 #else
 #define CRENDERFRAME_API
 #endif
+#include <vector>
 
 class CRenderFrame
 {
@@ -17,8 +18,8 @@ class CRenderFrame
 
         virtual CRENDERFRAME_API void render();
 
-        CRENDERFRAME void add(CRenderFrame* frame);
-        CRENDERFRAME void erase(CRenderFrame* frame);
+        CRENDERFRAME_API void add(CRenderFrame* frame);
+        CRENDERFRAME_API void erase(CRenderFrame* frame);
     protected:
         std::vector<CRenderFrame*> frames;
 };

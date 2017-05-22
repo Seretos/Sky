@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495323160 source:/home/aappen/git/Sky/SkyNet/CAssoziationSynapse.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CAssoziationSynapse.cpp
 	"stdafx.h"
 	"CAssoziationSynapse.h"
 
@@ -11,82 +11,82 @@
 1495458289 /home/aappen/git/Sky/SkyNet/targetver.h
 	<SDKDDKVer.h>
 
-1495326851 /home/aappen/git/Sky/SkyNet/CAssoziationSynapse.h
+1495458289 /home/aappen/git/Sky/SkyNet/CAssoziationSynapse.h
 	"INeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/INeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/INeuron.h
 	<vector>
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CBiasNeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CBiasNeuron.cpp
 	"stdafx.h"
 	"CBiasNeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CBiasNeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/CBiasNeuron.h
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CBinaerNeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CBinaerNeuron.cpp
 	"stdafx.h"
 	"CBinaerNeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CBinaerNeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/CBinaerNeuron.h
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CLayer.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CLayer.cpp
 	"stdafx.h"
 	"CLayer.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CLayer.h
+1495458289 /home/aappen/git/Sky/SkyNet/CLayer.h
 	"INetwork.h"
 	<vector>
 
-1495324099 /home/aappen/git/Sky/SkyNet/INetwork.h
+1495458289 /home/aappen/git/Sky/SkyNet/INetwork.h
 	"INeuron.h"
 
-1495324172 source:/home/aappen/git/Sky/SkyNet/CLogisticNeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CLogisticNeuron.cpp
 	"stdafx.h"
 	"CLogisticNeuron.h"
 	<cmath>
 
-1495324099 /home/aappen/git/Sky/SkyNet/CLogisticNeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/CLogisticNeuron.h
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CNetwork.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CNetwork.cpp
 	"stdafx.h"
 	"CNetwork.h"
 
-1495323160 /home/aappen/git/Sky/SkyNet/CNetwork.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNetwork.h
 	"INetwork.h"
 	<vector>
 
-1495324238 source:/home/aappen/git/Sky/SkyNet/CNetworkManager.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CNetworkManager.cpp
 	"stdafx.h"
 	"CNetworkManager.h"
 	"CSkyNetFactory.h"
 	<cstdlib>
 
-1495324099 /home/aappen/git/Sky/SkyNet/CNetworkManager.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNetworkManager.h
 	"INetwork.h"
 	"CLayer.h"
 	<vector>
 
-1495324099 /home/aappen/git/Sky/SkyNet/CSkyNetFactory.h
+1495458289 /home/aappen/git/Sky/SkyNet/CSkyNetFactory.h
 	"INeuron.h"
 	"INetwork.h"
 	"CNetworkManager.h"
 	"CSimulationManager.h"
 	"CNetworkManagerFile.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CSimulationManager.h
+1495458289 /home/aappen/git/Sky/SkyNet/CSimulationManager.h
 	<vector>
 	"CNetworkManager.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CNetworkManagerFile.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNetworkManagerFile.h
 	"CNetworkManager.h"
 	<string>
 	<iostream>
 	<fstream>
 
-1495324441 source:/home/aappen/git/Sky/SkyNet/CNetworkManagerFile.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CNetworkManagerFile.cpp
 	"stdafx.h"
 	"CNetworkManagerFile.h"
 	"CSkyNetFactory.h"
@@ -94,19 +94,19 @@
 	<sstream>
 	<stdlib.h>
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CNeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CNeuron.cpp
 	"stdafx.h"
 	"CNeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CNeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNeuron.h
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CSimulationManager.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CSimulationManager.cpp
 	"stdafx.h"
 	"CSimulationManager.h"
 	<thread>
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CSkyNetFactory.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CSkyNetFactory.cpp
 	"stdafx.h"
 	"CSkyNetFactory.h"
 	"CNetwork.h"
@@ -116,19 +116,20 @@
 	"CLogisticNeuron.h"
 	"CTanhNeuron.h"
 	"CSynapse.h"
+	"CAssoziationSynapse.h"
 	"INeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CTanhNeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/CTanhNeuron.h
 	"INeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CSynapse.h
+1495458289 /home/aappen/git/Sky/SkyNet/CSynapse.h
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/CSynapse.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CSynapse.cpp
 	"stdafx.h"
 	"CSynapse.h"
 
-1495324685 source:/home/aappen/git/Sky/SkyNet/CTanhNeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/CTanhNeuron.cpp
 	"stdafx.h"
 	"CTanhNeuron.h"
 	<cmath>
@@ -136,11 +137,11 @@
 1495458289 source:/home/aappen/git/Sky/SkyNet/dllmain.cpp
 	"stdafx.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/INeuron.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/INeuron.cpp
 	"stdafx.h"
 	"INeuron.h"
 
-1495323160 source:/home/aappen/git/Sky/SkyNet/SkyNet.cpp
+1495458289 source:/home/aappen/git/Sky/SkyNet/SkyNet.cpp
 	"stdafx.h"
 
 1495458289 source:/home/aappen/git/Sky/SkyNet/stdafx.cpp

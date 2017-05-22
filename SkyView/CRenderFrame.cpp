@@ -14,5 +14,11 @@ void CRenderFrame::add(CRenderFrame* frame){
 }
 
 void CRenderFrame::erase(CRenderFrame* frame){
-    this->frames.erase(frame);
+    //this->frames.erase(std::remove(this->frames.begin(), vec.end(), frame));
+}
+
+void CRenderFrame::render(){
+    for(int i=0;i<this->frames.size();i++){
+        frames.at(i)->render();
+    }
 }

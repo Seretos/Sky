@@ -12,15 +12,15 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
 #include <vector>
+#include "CRenderFrame.h"
 
-class CRenderWindow {
+class CRenderWindow: CRenderFrame {
 public:
 	CRenderWindow();
 	~CRenderWindow();
 
-	virtual CRENDERWINDOW_API void init();
-	virtual CRENDERWINDOW_API int render();
-	virtual void draw();
+	CRENDERWINDOW_API void init();
+	virtual CRENDERWINDOW_API void render();
 protected:
 	ALLEGRO_EVENT_QUEUE *event_queue;
 	ALLEGRO_DISPLAY *display;

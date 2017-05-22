@@ -1,52 +1,69 @@
 # depslib dependency file v1.0
-1495327139 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
+1495458289 source:/home/aappen/git/Sky/SkyExample/stdafx.cpp
+	"stdafx.h"
+
+1495458790 /home/aappen/git/Sky/SkyExample/stdafx.h
+	"targetver.h"
+	<stdio.h>
+	<tchar.h>
+	<cstddef>
+
+1495458746 /home/aappen/git/Sky/SkyExample/targetver.h
+	<SDKDDKVer.h>
+
+1495477408 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
 	"stdafx.h"
 	<iostream>
 	"../SkyNet/CSkyNetFactory.h"
 	"../SkyNet/INetwork.h"
+	"../SkyView/CSkyViewFactory.h"
 	<time.h>
 	<cstdlib>
+	<thread>
 
-1495327095 /home/aappen/git/Sky/SkyExample/stdafx.h
-	"targetver.h"
-	<stdio.h>
-	<tchar.h>
-
-1495326979 /home/aappen/git/Sky/SkyExample/targetver.h
-	<SDKDDKVer.h>
-
-1495324099 /home/aappen/git/Sky/SkyNet/CSkyNetFactory.h
+1495458289 /home/aappen/git/Sky/SkyNet/CSkyNetFactory.h
 	"INeuron.h"
 	"INetwork.h"
 	"CNetworkManager.h"
 	"CSimulationManager.h"
 	"CNetworkManagerFile.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/INeuron.h
+1495458289 /home/aappen/git/Sky/SkyNet/INeuron.h
 	<vector>
 
-1495324099 /home/aappen/git/Sky/SkyNet/INetwork.h
+1495458289 /home/aappen/git/Sky/SkyNet/INetwork.h
 	"INeuron.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CNetworkManager.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNetworkManager.h
 	"INetwork.h"
 	"CLayer.h"
 	<vector>
 
-1495324099 /home/aappen/git/Sky/SkyNet/CLayer.h
+1495458289 /home/aappen/git/Sky/SkyNet/CLayer.h
 	"INetwork.h"
 	<vector>
 
-1495324099 /home/aappen/git/Sky/SkyNet/CSimulationManager.h
+1495458289 /home/aappen/git/Sky/SkyNet/CSimulationManager.h
 	<vector>
 	"CNetworkManager.h"
 
-1495324099 /home/aappen/git/Sky/SkyNet/CNetworkManagerFile.h
+1495458289 /home/aappen/git/Sky/SkyNet/CNetworkManagerFile.h
 	"CNetworkManager.h"
 	<string>
 	<iostream>
 	<fstream>
 
-1495323160 source:/home/aappen/git/Sky/SkyExample/stdafx.cpp
-	"stdafx.h"
+1495475493 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
+	"../SkyNet/CSkyNetFactory.h"
+	"CRenderWindow.h"
+
+1495475971 /home/aappen/git/Sky/SkyView/CRenderWindow.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_font.h>
+	<vector>
+	"CRenderFrame.h"
+
+1495478172 /home/aappen/git/Sky/SkyView/CRenderFrame.h
+	<vector>
 

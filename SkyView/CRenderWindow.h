@@ -14,9 +14,9 @@
 #include <vector>
 #include "CRenderFrame.h"
 
-class CRenderWindow: CRenderFrame {
+class CRenderWindow: public CRenderFrame {
 public:
-	CRenderWindow();
+	CRenderWindow(int width, int height);
 	~CRenderWindow();
 
 	CRENDERWINDOW_API void init();

@@ -1,8 +1,12 @@
 #include "stdafx.h"
 #include "CRenderFrame.h"
 
-CRenderFrame::CRenderFrame(){
+CRenderFrame::CRenderFrame(int x, int y, int width, int height){
     this->frames = std::vector<CRenderFrame*>();
+    this->x = x;
+    this->y = y;
+    this->width = width;
+    this->height = height;
 }
 
 CRenderFrame::~CRenderFrame(){
@@ -10,7 +14,7 @@ CRenderFrame::~CRenderFrame(){
 }
 
 void CRenderFrame::add(CRenderFrame* frame){
-    this->frames.push_back(frame);
+    //this->frames.push_back(frame);
 }
 
 void CRenderFrame::erase(CRenderFrame* frame){

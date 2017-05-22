@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CRenderWindow.h"
 
-CRenderWindow::CRenderWindow() : CRenderFrame() {
+CRenderWindow::CRenderWindow(int width, int height) : CRenderFrame(0,0,width,height) {
 	this->event_queue = NULL;
 	this->display = NULL;
 	this->font = NULL;
@@ -16,7 +16,7 @@ void CRenderWindow::init() {
 	al_init();
 	al_init_primitives_addon();
 
-	this->display = al_create_display(1024, 768);
+	this->display = al_create_display(this->width, this->height);
 	this->event_queue = al_create_event_queue();
 	this->font = al_create_builtin_font();
 

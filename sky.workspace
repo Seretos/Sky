@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="SkyNet/SkyNet.cbp" />
+		<Project filename="SkyView/SkyView.cbp" />
+		<Project filename="SkyExample/SkyExample.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

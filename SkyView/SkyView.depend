@@ -17,7 +17,7 @@
 	<vector>
 	"CRenderNeuron.h"
 
-1495468460 /home/aappen/git/Sky/SkyView/CRenderWindow.h
+1495475971 /home/aappen/git/Sky/SkyView/CRenderWindow.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_font.h>
@@ -49,15 +49,16 @@
 	"CRenderNeuron.h"
 	<sstream>
 
-1495467401 source:/home/aappen/git/Sky/SkyView/CRenderWindow.cpp
+1495475295 source:/home/aappen/git/Sky/SkyView/CRenderWindow.cpp
 	"stdafx.h"
 	"CRenderWindow.h"
 
-1495467465 source:/home/aappen/git/Sky/SkyView/CSkyViewFactory.cpp
+1495475477 source:/home/aappen/git/Sky/SkyView/CSkyViewFactory.cpp
 	"stdafx.h"
 	"CSkyViewFactory.h"
+	"CNetworkFrame.h"
 
-1495466466 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
+1495475493 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
 	"../SkyNet/CSkyNetFactory.h"
 	"CRenderWindow.h"
 
@@ -87,10 +88,18 @@
 1495458289 source:/home/aappen/git/Sky/SkyView/stdafx.cpp
 	"stdafx.h"
 
-1495467757 source:/home/aappen/git/Sky/SkyView/CRenderFrame.cpp
+1495475115 source:/home/aappen/git/Sky/SkyView/CRenderFrame.cpp
 	"stdafx.h"
 	"CRenderFrame.h"
 
-1495467770 /home/aappen/git/Sky/SkyView/CRenderFrame.h
+1495475084 /home/aappen/git/Sky/SkyView/CRenderFrame.h
 	<vector>
+
+1495475637 source:/home/aappen/git/Sky/SkyView/CNetworkFrame.cpp
+	"stdafx.h"
+	"CNetworkFrame.h"
+
+1495475979 /home/aappen/git/Sky/SkyView/CNetworkFrame.h
+	"../SkyNet/CNetworkManager.h"
+	"CRenderFrame.h"
 

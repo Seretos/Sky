@@ -48,6 +48,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="CNetworkFrame.cpp" />
+		<Unit filename="CNetworkFrame.h" />
 		<Unit filename="CRenderFrame.cpp" />
 		<Unit filename="CRenderFrame.h" />
 		<Unit filename="CRenderWindow.cpp" />

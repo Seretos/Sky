@@ -10,10 +10,12 @@
 #endif
 #include <vector>
 
+class CRenderFrame;
+
 class CRenderFrame
 {
     public:
-        CRenderFrame();
+        CRenderFrame(int x, int y, int width, int height);
         ~CRenderFrame();
 
         virtual CRENDERFRAME_API void render();
@@ -22,4 +24,8 @@ class CRenderFrame
         CRENDERFRAME_API void erase(CRenderFrame* frame);
     protected:
         std::vector<CRenderFrame*> frames;
+        int x;
+        int y;
+        int width;
+        int height;
 };

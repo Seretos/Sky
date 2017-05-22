@@ -15,5 +15,6 @@
 class CSkyViewFactory
 {
 public:
-	static SKYVIEWFACTORY_API CRenderWindow* createRenderWindow();
+	static SKYVIEWFACTORY_API CRenderWindow* createRenderWindow(int width, int height);
+	static SKYVIEWFACTORY_API CRenderFrame* createNetworkFrame(CNetworkManager* manager, int x, int y, int width, int height);
 };

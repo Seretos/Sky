@@ -11,7 +11,7 @@
 1495458746 /home/aappen/git/Sky/SkyExample/targetver.h
 	<SDKDDKVer.h>
 
-1495458750 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
+1495475571 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
 	"stdafx.h"
 	<iostream>
 	"../SkyNet/CSkyNetFactory.h"
@@ -53,12 +53,17 @@
 	<iostream>
 	<fstream>
 
-1495458397 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
+1495475493 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
 	"../SkyNet/CSkyNetFactory.h"
 	"CRenderWindow.h"
 
-1495458397 /home/aappen/git/Sky/SkyView/CRenderWindow.h
+1495475971 /home/aappen/git/Sky/SkyView/CRenderWindow.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_font.h>
+	<vector>
+	"CRenderFrame.h"
+
+1495475084 /home/aappen/git/Sky/SkyView/CRenderFrame.h
+	<vector>
 

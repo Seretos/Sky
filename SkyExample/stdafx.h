@@ -7,10 +7,9 @@
 
 #include "targetver.h"
 
-#if defined(_WIN32)
 #include <stdio.h>
 #include <tchar.h>
-#endif
+
 
 
 // TODO: Hier auf zusätzliche Header, die das Programm erfordert, verweisen.

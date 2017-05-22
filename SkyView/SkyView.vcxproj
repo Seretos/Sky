@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{68444C18-8DF0-488B-844D-46CB7FDD402C}</ProjectGuid>
+    <ProjectGuid>{50F2E853-96BF-4735-9083-CB0F6CCBBECD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SkyView</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -74,6 +74,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <Allegro_AddonFont>true</Allegro_AddonFont>
+    <Allegro_LibraryType>StaticMonolithRelease</Allegro_LibraryType>
+    <Allegro_AddonPrimitives>true</Allegro_AddonPrimitives>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -145,12 +148,18 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CWindow.h" />
+    <ClInclude Include="CNetworkWindow.h" />
+    <ClInclude Include="CRenderNeuron.h" />
+    <ClInclude Include="CRenderWindow.h" />
+    <ClInclude Include="CSkyViewFactory.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CWindow.cpp" />
+    <ClCompile Include="CNetworkWindow.cpp" />
+    <ClCompile Include="CRenderNeuron.cpp" />
+    <ClCompile Include="CRenderWindow.cpp" />
+    <ClCompile Include="CSkyViewFactory.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -173,7 +182,23 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyNet\SkyNet.vcxproj">
+      <Project>{a86d906f-5c62-4b56-bca5-3d01f95185c2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Allegro.5.2.2.1\build\native\Allegro.targets" Condition="Exists('..\packages\Allegro.5.2.2.1\build\native\Allegro.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\AllegroDeps.1.5.0.1\build\native\AllegroDeps.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AllegroDeps.1.5.0.1\build\native\AllegroDeps.targets'))" />
+    <Error Condition="!Exists('..\packages\Allegro.5.2.2.1\build\native\Allegro.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Allegro.5.2.2.1\build\native\Allegro.targets'))" />
+  </Target>
 </Project>

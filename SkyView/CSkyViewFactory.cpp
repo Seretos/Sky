@@ -8,7 +8,6 @@ CRenderWindow* CSkyViewFactory::createRenderWindow(int width, int height) {
 }
 
 CRenderFrame* CSkyViewFactory::createNetworkFrame(CNetworkManager* manager, int x, int y, int width, int height){
-    //CNetworkFrame* frame = new CNetworkFrame(manager,x,y,width,height);
-    //return (CRenderFrame*)frame;
-    return new CRenderFrame(x,y,width,height);
+    CNetworkFrame* frame = new CNetworkFrame(manager,x,y,width,height);
+    return (CRenderFrame*)frame;
 }

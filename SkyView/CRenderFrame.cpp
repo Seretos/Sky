@@ -14,7 +14,7 @@ CRenderFrame::~CRenderFrame(){
 }
 
 void CRenderFrame::add(CRenderFrame* frame){
-    //this->frames.push_back(frame);
+    this->frames.push_back(frame);
 }
 
 void CRenderFrame::erase(CRenderFrame* frame){

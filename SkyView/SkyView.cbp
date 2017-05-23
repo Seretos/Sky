@@ -58,6 +58,8 @@
 		<Unit filename="CRenderWindow.h" />
 		<Unit filename="CSkyViewFactory.cpp" />
 		<Unit filename="CSkyViewFactory.h" />
+		<Unit filename="CSynapseFrame.cpp" />
+		<Unit filename="CSynapseFrame.h" />
 		<Unit filename="SkyView.cpp" />
 		<Unit filename="dllmain.cpp" />
 		<Unit filename="stdafx.cpp" />

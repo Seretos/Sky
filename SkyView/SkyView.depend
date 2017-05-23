@@ -3,12 +3,12 @@
 	"stdafx.h"
 	"CNetworkWindow.h"
 
-1495458397 /home/aappen/git/Sky/SkyView/stdafx.h
+1495533475 /home/aappen/git/Sky/SkyView/stdafx.h
 	"targetver.h"
 	<windows.h>
 	<cstddef>
 
-1495458397 /home/aappen/git/Sky/SkyView/targetver.h
+1495533475 /home/aappen/git/Sky/SkyView/targetver.h
 	<SDKDDKVer.h>
 
 1495458397 /home/aappen/git/Sky/SkyView/CNetworkWindow.h

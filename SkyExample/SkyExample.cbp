@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add option="-fPIC" />
 				</Compiler>
 				<Linker>
 					<Add library="../bin/Debug/libSkyNet.so" />

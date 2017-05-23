@@ -2,7 +2,7 @@
 1495458289 source:/home/aappen/git/Sky/SkyExample/stdafx.cpp
 	"stdafx.h"
 
-1495458790 /home/aappen/git/Sky/SkyExample/stdafx.h
+1495533475 /home/aappen/git/Sky/SkyExample/stdafx.h
 	"targetver.h"
 	<stdio.h>
 	<tchar.h>
@@ -11,7 +11,7 @@
 1495458746 /home/aappen/git/Sky/SkyExample/targetver.h
 	<SDKDDKVer.h>
 
-1495477408 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
+1495533475 source:/home/aappen/git/Sky/SkyExample/SkyExample.cpp
 	"stdafx.h"
 	<iostream>
 	"../SkyNet/CSkyNetFactory.h"
@@ -28,7 +28,7 @@
 	"CSimulationManager.h"
 	"CNetworkManagerFile.h"
 
-1495458289 /home/aappen/git/Sky/SkyNet/INeuron.h
+1495533475 /home/aappen/git/Sky/SkyNet/INeuron.h
 	<vector>
 
 1495458289 /home/aappen/git/Sky/SkyNet/INetwork.h
@@ -53,17 +53,17 @@
 	<iostream>
 	<fstream>
 
-1495475493 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
+1495533475 /home/aappen/git/Sky/SkyView/CSkyViewFactory.h
 	"../SkyNet/CSkyNetFactory.h"
 	"CRenderWindow.h"
 
-1495475971 /home/aappen/git/Sky/SkyView/CRenderWindow.h
+1495533475 /home/aappen/git/Sky/SkyView/CRenderWindow.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_font.h>
 	<vector>
 	"CRenderFrame.h"
 
-1495478172 /home/aappen/git/Sky/SkyView/CRenderFrame.h
+1495533475 /home/aappen/git/Sky/SkyView/CRenderFrame.h
 	<vector>
 

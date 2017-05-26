@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -27,21 +24,12 @@
     <ClInclude Include="CWorld.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CWorldTile.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="SkyExample.cpp">
+    <ClCompile Include="SkyWorld.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="CWorld.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="CWorldTile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

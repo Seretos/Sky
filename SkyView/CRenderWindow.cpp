@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "CRenderWindow.h"
+#include <allegro5/allegro_image.h>
 
-CRenderWindow::CRenderWindow(int width, int height) : CRenderFrame(0,0,width,height) {
+CRenderWindow::CRenderWindow(ALLEGRO_DISPLAY* display) : CRenderFrame(0,0,0,0) {
 	this->event_queue = NULL;
-	this->display = NULL;
+	this->display = display;
 	this->font = NULL;
 }
 
@@ -13,20 +14,18 @@ CRenderWindow::~CRenderWindow() {
 }
 
 void CRenderWindow::init() {
-	al_init();
-	al_init_primitives_addon();
+//	al_init();
+//	al_init_primitives_addon();
+//	al_init_image_addon();
+	
+//	this->event_queue = al_create_event_queue();
+//	this->font = al_create_builtin_font();
 
-	this->display = al_create_display(this->width, this->height);
-	this->event_queue = al_create_event_queue();
-	this->font = al_create_builtin_font();
-
-	al_register_event_source(this->event_queue, al_get_display_event_source(this->display));
+//	al_register_event_source(this->event_queue, al_get_display_event_source(this->display));
 }
 
 void CRenderWindow::render() {
-	al_clear_to_color(al_map_rgb(0, 0, 0));
-
-    CRenderFrame::render();
+	CRenderFrame::render();
 
     al_flip_display();
 }

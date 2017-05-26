@@ -27,11 +27,6 @@ CNetworkFrame::CNetworkFrame(CNetworkManager* manager, int x, int y, int width, 
 		this->createRenderSynapseLayer(this->manager->getHiddenLayer(i));
 		std::cout << "loading network " << (100 / this->manager->getHiddenLayerSize()) * (i+1) << '\n';
 	}
-
-	//CRenderFrame* frame = CSkyViewFactory::createSynapseFrame(this->manager->getInputLayer()->getNeuron(0)->getOutputSynapse(0), 10, 10, 100, 100);
-	//this->frames.push_back(frame);
-	//this->frames.assign(this->synapses.begin(), this->synapses.end());
-	//this->frames.assign(this->neurons.begin(),this->neurons.end());
 }
 
 void CNetworkFrame::createRenderSynapseLayer(CLayer* layer) {

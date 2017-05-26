@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{c34b95ae-c40c-42b5-b364-269b2690be55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simulation">
+      <UniqueIdentifier>{2cc52261-37f5-4899-bb15-8b00ceb9c77e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filter">
+      <UniqueIdentifier>{503df4eb-421e-41c0-bb7d-b0f71d4f786f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,64 +33,67 @@
     <ClInclude Include="targetver.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CSkyViewFactory.h">
+    <ClInclude Include="CWindow.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CRenderWindow.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="CNetworkFrame.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="CWorld.h">
+      <Filter>simulation</Filter>
     </ClInclude>
     <ClInclude Include="CRenderFrame.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderWindow.h">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderWorld2.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="CNeuronFrame.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="CRenderWorld.h">
+      <Filter>filter</Filter>
     </ClInclude>
-    <ClInclude Include="CSynapseFrame.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="CRenderSprite.h">
+      <Filter>filter</Filter>
     </ClInclude>
-    <ClInclude Include="CWorldTileFrame.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="IWorldTile.h">
-      <Filter>Headerdateien</Filter>
+    <ClInclude Include="CRenderTile.h">
+      <Filter>filter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SkyView.cpp">
+    <ClCompile Include="SkyWorld.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="CWindow.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CSkyViewFactory.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="CRenderWindow.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="CNetworkFrame.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="CWorld.cpp">
+      <Filter>simulation</Filter>
     </ClCompile>
     <ClCompile Include="CRenderFrame.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderWindow.cpp">
+      <Filter>filter</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderWorld2.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="CNeuronFrame.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="CRenderWorld.cpp">
+      <Filter>filter</Filter>
     </ClCompile>
-    <ClCompile Include="CSynapseFrame.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="CRenderSprite.cpp">
+      <Filter>filter</Filter>
     </ClCompile>
-    <ClCompile Include="CWorldTileFrame.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="CRenderTile.cpp">
+      <Filter>filter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\packages\jQuery.2.1.1\tools\jquery-2.1.1.intellisense.js">
+      <Filter>Scripts</Filter>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
 </Project>

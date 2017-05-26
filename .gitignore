@@ -14,5 +14,11 @@ SkyNet/Release/
 SkyNetTests/Debug/
 SkyNetTests/Release/
 
+SkyWorld/Debug/
+SkyWorld/Release/
+
+SkyWorld2/Debug/
+SkyWorld2/Release/
+
 Sky.VC.db
 Sky.VC.VC.opendb

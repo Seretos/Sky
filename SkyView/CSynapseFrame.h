@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #if defined(_WIN32)
 #ifdef CSYNAPSEFRAME_EXPORTS
 #define CSYNAPSEFRAME_API __declspec(dllexport)

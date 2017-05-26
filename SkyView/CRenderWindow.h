@@ -16,7 +16,7 @@
 
 class CRenderWindow: public CRenderFrame {
 public:
-	CRenderWindow(int width, int height);
+	CRenderWindow(ALLEGRO_DISPLAY* display);
 	~CRenderWindow();
 
 	CRENDERWINDOW_API void init();

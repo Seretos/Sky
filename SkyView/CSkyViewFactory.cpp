@@ -3,9 +3,10 @@
 #include "CNetworkFrame.h"
 #include "CNeuronFrame.h"
 #include "CSynapseFrame.h"
+#include "CWorldTileFrame.h"
 
-CRenderWindow* CSkyViewFactory::createRenderWindow(int width, int height) {
-    CRenderWindow* window = new CRenderWindow(width,height);
+CRenderWindow* CSkyViewFactory::createRenderWindow(ALLEGRO_DISPLAY* display) {
+    CRenderWindow* window = new CRenderWindow(display);
 	return window;
 }
 
@@ -21,5 +22,10 @@ CRenderFrame* CSkyViewFactory::createNeuronFrame(INeuron* neuron, int x, int y) 
 
 CRenderFrame* CSkyViewFactory::createSynapseFrame(ISynapse* synapse, int startX, int startY, int endX, int endY) {
 	CSynapseFrame* frame = new CSynapseFrame(synapse, startX, startY, endX, endY);
+	return (CRenderFrame*)frame;
+}
+
+CRenderFrame* CSkyViewFactory::createWorldTileFrame(IWorldTile* tile, int x, int y, int type) {
+	CWorldTileFrame* frame = new CWorldTileFrame(tile, x, y, type);
 	return (CRenderFrame*)frame;
 }
